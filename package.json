@@ -1,0 +1,23 @@
+{
+  "name": "11ty-postDate-filters",
+  "version": "0.0.1",
+  "description": "Eleventy postDate filters",
+  "homepage": "https://github.com/aloskutov/eleventy-postDate-filters",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "npx jest",
+    "build": "tsc --build",
+    "clean": "tsc --build --clean"
+  },
+  "author": "Alex Loskutov",
+  "license": "MIT",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.23.3",
+    "@jest/globals": "^29.7.0",
+    "@types/node": "^20.9.1",
+    "ts-jest": "^29.1.1"
+  }
+}
