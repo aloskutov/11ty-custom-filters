@@ -9,6 +9,7 @@
   "prettier": "@aloskutov/prettier-config",
   "scripts": {
     "test": "npx jest",
+    "lint": "npx eslint ./src",
     "coverage": "npx jest --coverage",
     "build": "tsc --build",
     "clean": "tsc --build --clean"
@@ -19,6 +20,10 @@
     "@babel/preset-typescript": "^7.23.3",
     "@jest/globals": "^29.7.0",
     "@types/node": "^20.9.2",
-    "ts-jest": "^29.1.1"
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "@typescript-eslint/parser": "^6.11.0",
+    "eslint": "^8.54.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.2.2"
   }
 }
