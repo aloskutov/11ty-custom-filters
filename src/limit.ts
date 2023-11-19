@@ -1,3 +1,3 @@
-export const limit = (array: Array<any>, limit: number): Array<any> => {
-    return array.slice(0, limit);
+export const limit = (array: Array<string>, limit: number): Array<string> => {
+  return array.slice(0, limit);
 };
