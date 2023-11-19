@@ -11,6 +11,14 @@ const timeOptions: Intl.DateTimeFormatOptions = {
     minute: "numeric",
     timeZone: "Asia/Barnaul",
 };
+const currentOptions: Intl.DateTimeFormatOptions = {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    day: "2-digit",
+    year: "numeric",
+    month: "2-digit",
+};
 
 /**
  * Generated date/time string for post title
@@ -27,19 +35,17 @@ export const postDate = (dateString: string): string => {
 };
 
 /**
- * Return current date/time 'YYYY-MM-DD-HHmm'
+ * Return current date/time 'YYYY-MM-DD-HHmmss'
  * @returns string
  */
 export const currentDateTimeString = (): string => {
-    const now = new Date();
-    const numberFormatter: Intl.NumberFormat = new Intl.NumberFormat(locale, {minimumIntegerDigits: 2});
-    const year: number = now.getFullYear();
-    const month: number = now.getMonth() + 1;
-    const date: string = numberFormatter.format(now.getDate());
-    const hours: string = numberFormatter.format(now.getHours());
-    const minutes: string = numberFormatter.format(now.getMinutes());
+    const now: Date = new Date();
 
-    return `${year}-${month}-${date}-${hours}${minutes}`;
+    const [date, time] = now.toLocaleString(locale, currentOptions).split(', ');
+    const [day, month, year] = date.split('.');
+    const [hour, minute, second] = time.split(':');
+
+    return `${year}-${month}-${day}-${hour}${minute}${second}`;
 }
 
 export const ISODate = (dateString: string): string => {

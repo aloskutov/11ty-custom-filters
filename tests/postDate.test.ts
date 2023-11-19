@@ -10,7 +10,7 @@ describe('Test Dates', () => {
 
     test('currentDateTimeString', () => {
         jest.useFakeTimers().setSystemTime(new Date(dateString));
-        expect(currentDateTimeString()).toBe('2023-11-07-1441');
+        expect(currentDateTimeString()).toBe('2023-11-07-144106');
     });
 
     test('ISODate', () => {
