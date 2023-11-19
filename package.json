@@ -6,6 +6,7 @@
   "directories": {
     "test": "tests"
   },
+  "prettier": "@aloskutov/prettier-config",
   "scripts": {
     "test": "npx jest",
     "coverage": "npx jest --coverage",
