@@ -17,11 +17,11 @@ const timeOptions: Intl.DateTimeFormatOptions = {
  * @param dateString string
  * @returns string
  */
-export const postDate = (dateString: string):string => {
-    const date:Date = new Date(dateString);
+export const postDate = (dateString: string): string => {
+    const date: Date = new Date(dateString);
 
-    const outputDate:string = date.toLocaleString(locale, dateOptions);
-    const outputTime:string = date.toLocaleString(locale, timeOptions);
+    const outputDate: string = date.toLocaleString(locale, dateOptions);
+    const outputTime: string = date.toLocaleString(locale, timeOptions);
 
     return `${outputDate} в ${outputTime}`;
 };
@@ -30,7 +30,7 @@ export const postDate = (dateString: string):string => {
  * Return current date/time 'YYYY-MM-DD-HHmm'
  * @returns string
  */
-export const currentDateTimeString = ():string => {
+export const currentDateTimeString = (): string => {
     const now = new Date();
     const numberFormatter: Intl.NumberFormat = new Intl.NumberFormat(locale, {minimumIntegerDigits: 2});
     const year: number = now.getFullYear();
@@ -42,8 +42,8 @@ export const currentDateTimeString = ():string => {
     return `${year}-${month}-${date}-${hours}${minutes}`;
 }
 
-export const ISODate = (dateString: string):string => {
-    const date:Date = new Date(dateString);
+export const ISODate = (dateString: string): string => {
+    const date: Date = new Date(dateString);
 
     return date.toISOString();
 };
