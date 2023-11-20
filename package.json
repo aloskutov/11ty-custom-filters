@@ -1,6 +1,6 @@
 {
   "name": "11ty-custom-filters",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Eleventy custom filters",
   "homepage": "https://github.com/aloskutov/eleventy-custom-filters",
   "directories": {
