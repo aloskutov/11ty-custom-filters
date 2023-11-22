@@ -7,6 +7,9 @@ module.exports = {
         project: ['./tsconfig.json'],
         tsconfigRootDir: __dirname,
     },
+    "env": {
+        "jest/globals": true,
+    },
     root: true,
     "ignorePatterns": ["*.config.js"],
     "rules": {
