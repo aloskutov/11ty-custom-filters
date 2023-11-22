@@ -22,8 +22,8 @@ const currentOptions: Intl.DateTimeFormatOptions = {
 
 /**
  * Generated date/time string for post title
- * @param dateString string
- * @returns string
+ * @param {string} dateString
+ * @returns {string}
  */
 export const postDate = (dateString: string): string => {
   const date: Date = new Date(dateString);
@@ -36,7 +36,7 @@ export const postDate = (dateString: string): string => {
 
 /**
  * Return current date/time 'YYYY-MM-DD-HHmmss'
- * @returns string
+ * @returns {string}
  */
 export const currentDateTimeString = (): string => {
   const now: Date = new Date();
@@ -48,6 +48,11 @@ export const currentDateTimeString = (): string => {
   return `${year}-${month}-${day}-${hour}${minute}${second}`;
 };
 
+/**
+ *
+ * @param {string} dateString
+ * @returns {string}
+ */
 export const ISODate = (dateString: string): string => {
   const date: Date = new Date(dateString);
 
