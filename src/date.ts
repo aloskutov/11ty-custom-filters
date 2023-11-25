@@ -39,10 +39,7 @@ const formatDateTimeLongOptions: Intl.DateTimeFormatOptions = {
  * @returns Date
  */
 export const toDate = (date: string | Date = new Date()): Date => {
-
-  return typeof date === 'string'
-    ? new Date(date)
-    : date;
+  return typeof date === 'string' ? new Date(date) : date;
 };
 
 /**
@@ -55,8 +52,8 @@ export const toDate = (date: string | Date = new Date()): Date => {
 export const formatDate = (
   date: string | Date = new Date(),
   locale: string = globalLocale,
-  options: Intl.DateTimeFormatOptions = {}): string => {
-
+  options: Intl.DateTimeFormatOptions = {}
+): string => {
   const localOptions: Intl.DateTimeFormatOptions = {};
 
   Object.assign(localOptions, formatDateOptions, options);
@@ -74,8 +71,8 @@ export const formatDate = (
 export const formatDateLong = (
   date: string | Date = new Date(),
   locale: string = globalLocale,
-  options: Intl.DateTimeFormatOptions = {}): string => {
-
+  options: Intl.DateTimeFormatOptions = {}
+): string => {
   const localOptions: Intl.DateTimeFormatOptions = {};
 
   Object.assign(localOptions, formatDateLongOptions, options);
@@ -93,8 +90,8 @@ export const formatDateLong = (
 export const formatDateTimeLong = (
   date: string | Date = new Date(),
   locale: string = globalLocale,
-  options: Intl.DateTimeFormatOptions = {}): string => {
-
+  options: Intl.DateTimeFormatOptions = {}
+): string => {
   const localOptions: Intl.DateTimeFormatOptions = {};
 
   Object.assign(localOptions, formatDateTimeLongOptions, options);
@@ -110,8 +107,8 @@ export const formatDateTimeLong = (
 export const formatDateTime = (
   date: string | Date = new Date(),
   locale: string = globalLocale,
-  options: Intl.DateTimeFormatOptions = {}): string => {
-
+  options: Intl.DateTimeFormatOptions = {}
+): string => {
   const localOptions: Intl.DateTimeFormatOptions = {};
 
   Object.assign(localOptions, formatDateTimeOptions, options);
@@ -125,7 +122,6 @@ export const formatDateTime = (
  * @returns {string}}
  */
 export const formatISO = (date: string | Date = new Date()): string => {
-
   return toDate(date).toISOString();
 };
 
@@ -135,12 +131,7 @@ export const formatISO = (date: string | Date = new Date()): string => {
  * @returns {string}
  */
 export const formatDateNumeric = (date: string | Date = new Date()) => {
-
-  return formatDateTime(date)
-    .split(', ')[0]
-    .split('.')
-    .reverse()
-    .join('-');
+  return formatDateTime(date).split(', ')[0].split('.').reverse().join('-');
 };
 
 /**
@@ -149,7 +140,6 @@ export const formatDateNumeric = (date: string | Date = new Date()) => {
  * @returns {string}
  */
 export const formatTimeNumeric = (date: string | Date = new Date()) => {
-
   return formatDateTime(date).split(', ')[1];
 };
 
@@ -159,6 +149,7 @@ export const formatTimeNumeric = (date: string | Date = new Date()) => {
  * @returns {string}
  */
 export const formatFile = (date: string | Date = new Date()) => {
-
-  return `${formatDateNumeric(date)}-${formatTimeNumeric(date).split(':').join('')}`;
+  return `${formatDateNumeric(date)}-${formatTimeNumeric(date)
+    .split(':')
+    .join('')}`;
 };

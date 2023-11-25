@@ -6,11 +6,11 @@ const now: string = '2023-11-22 20:08:23 +07:00';
 const dateObj: Date = new Date(date);
 const nowObj: Date = new Date(now);
 const options: Intl.DateTimeFormatOptions = {
-  timeZone: 'UTC'
+  timeZone: 'UTC',
 };
 
 describe('Test Dates', () => {
-  test('String to Date', () =>{
+  test('String to Date', () => {
     expect(dt.toDate(date)).toEqual(dateObj);
   });
 
@@ -32,11 +32,15 @@ describe('Test Dates', () => {
   });
 
   test('Long date time format', () => {
-    expect(dt.formatDateTimeLong(date)).toBe('вторник, 7 ноября 2023 г. в 14:41:06');
+    expect(dt.formatDateTimeLong(date)).toBe(
+      'вторник, 7 ноября 2023 г. в 14:41:06'
+    );
   });
 
   test('Long date time format UTC', () => {
-    expect(dt.formatDateTimeLong(date, 'en', options)).toBe('Tuesday, November 7, 2023 at 07:41:06 AM');
+    expect(dt.formatDateTimeLong(date, 'en', options)).toBe(
+      'Tuesday, November 7, 2023 at 07:41:06 AM'
+    );
   });
 
   test('Long date time format now', () => {
@@ -63,6 +67,4 @@ describe('Test Dates', () => {
   test('file format with string', () => {
     expect(dt.formatFile(date)).toBe('2023-11-07-144106');
   });
-
 });
-
