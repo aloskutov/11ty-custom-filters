@@ -9,8 +9,8 @@
   "prettier": "@aloskutov/prettier-config",
   "scripts": {
     "test": "npx jest",
-    "lint": "npx eslint ./src",
-    "coverage": "npx jest --coverage",
+    "test:coverage": "npx jest --coverage",
+    "test:lint": "npx eslint ./src",
     "build": "tsc --build",
     "clean": "tsc --build --clean"
   },

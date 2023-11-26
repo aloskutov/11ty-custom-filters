@@ -128,10 +128,18 @@ export const formatISO = (date: string | Date = new Date()): string => {
 /**
  * Returns a date string formatted like "yyyy-mm-dd".
  * @param {string | Date} date
+ * @param {string} dateSeparator default value '-'
  * @returns {string}
  */
-export const formatDateNumeric = (date: string | Date = new Date()) => {
-  return formatDateTime(date).split(', ')[0].split('.').reverse().join('-');
+export const formatDateNumeric = (
+  date: string | Date = new Date(),
+  dateSeparator: string = '-'
+) => {
+  return formatDateTime(date)
+    .split(', ')[0]
+    .split('.')
+    .reverse()
+    .join(dateSeparator);
 };
 
 /**
