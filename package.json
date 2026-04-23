@@ -6,27 +6,19 @@
   "directories": {
     "test": "tests"
   },
+  "type": "module",
   "prettier": "@aloskutov/prettier-config",
   "scripts": {
-    "test": "npx jest",
-    "test:coverage": "npx jest --coverage",
-    "test:lint": "npx eslint ./src",
     "build": "tsc --build",
-    "clean": "tsc --build --clean"
+    "clean": "tsc --build --clean",
+    "test": "node --test",
+    "test:coverage": "node --experimental-test-coverage --test"
   },
   "author": "Alex Loskutov",
   "license": "MIT",
   "devDependencies": {
     "@aloskutov/prettier-config": "^1.0.1",
-    "@babel/preset-typescript": "^7.23.3",
-    "@jest/globals": "^29.7.0",
-    "@types/node": "^20.10.0",
-    "@typescript-eslint/eslint-plugin": "^6.12.0",
-    "@typescript-eslint/parser": "^6.12.0",
-    "eslint": "^8.54.0",
-    "jest": "^29.7.0",
-    "prettier": "^3.1.0",
-    "ts-jest": "^29.1.1",
-    "typescript": "^5.3.2"
+    "prettier": "^3.8.3",
+    "typescript": "^6.0.3"
   }
 }
