@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert';
-import {limit} from '../dist/limit.js';
+import limit from '../dist/limit.js';
 
 test('Test filter limit', (t) => {
   test.it('limit', () => {
