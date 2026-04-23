@@ -1,5 +1,5 @@
 import {describe, expect, test, jest} from '@jest/globals';
-import {postDate, currentDateTimeString, ISODate} from '../src/postDate';
+import {postDate, currentDateTimeString, ISODate} from '../src/post-date';
 
 const dateString: string = '2023-11-07 14:41:06 +07:00';
 
