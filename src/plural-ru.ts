@@ -8,7 +8,7 @@ const forms: Record<string, number> = {
   many: 2,
   other: 2,
 };
-const pr = new Intl.PluralRules(locale, options);
+const pr: Intl.PluralRules = new Intl.PluralRules(locale, options);
 
 /**
  * Plurals

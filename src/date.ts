@@ -134,7 +134,7 @@ export const formatISO = (date: string | Date = new Date()): string => {
 export const formatDateNumeric = (
   date: string | Date = new Date(),
   dateSeparator: string = '-'
-) => {
+): string => {
   return formatDateTime(date)
     .split(', ')[0]
     .split('.')
@@ -147,7 +147,7 @@ export const formatDateNumeric = (
  * @param {string | Date} date
  * @returns {string}
  */
-export const formatTimeNumeric = (date: string | Date = new Date()) => {
+export const formatTimeNumeric = (date: string | Date = new Date()): string => {
   return formatDateTime(date).split(', ')[1];
 };
 
@@ -156,7 +156,7 @@ export const formatTimeNumeric = (date: string | Date = new Date()) => {
  * @param {string | Date} date
  * @returns {string}
  */
-export const formatFile = (date: string | Date = new Date()) => {
+export const formatFile = (date: string | Date = new Date()): string => {
   return `${formatDateNumeric(date)}-${formatTimeNumeric(date)
     .split(':')
     .join('')}`;
