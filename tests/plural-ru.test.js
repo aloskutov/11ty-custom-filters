@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert';
-import plural from '../dist/plural.js';
+import plural from '../dist/plural-ru.js';
 
 const values = [
   { number: undefined, plurals: ['запись', 'записи', 'записей'], result: 'записей' },
